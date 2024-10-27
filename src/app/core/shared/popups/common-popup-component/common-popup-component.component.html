@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-center">
+  <form [formGroup]="addTopicForm">
+    <div>
+      <div>
+        Name:
+        <input
+          class="form-control"
+          type="text"
+          formControlName="name"
+          name="name"
+        />
+      </div>
+      <div>
+        Description:
+        <input
+          class="form-control"
+          type="text"
+          formControlName="description"
+          name="name"
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        [disabled]="!addTopicForm.valid"
+        (click)="saveTopic()"
+        mat-raised-button
+        color="primary"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>
